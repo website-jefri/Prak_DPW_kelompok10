@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Jabatan Fungsional</title>
+    <link rel="stylesheet" href="tambahdata.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+ <body>
+    <header class="topbar">
+        <button class="hamburger" id="hamburgerBtn">
+            <span class="material-icons-round">menu</span>
+        </button>
+
+        <div class="topbar-logo">
+            <img src="img/unri.png" class="logo">
+        </div>
+
+        <div class="topbar-right">
+            <span class="topbar-name">Hai, Frieren</span>
+            <div class="avatar" title="Profil">
+                <span class="material-icons-round">person</span>
+            </div>
+        </div>
+    </header>
+        <div class="overlay" id="overlay"></div>
+        <div class="layout">
+        
+            <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+
+                <span class="nav-label">Utama</span>
+
+                <a href="dashboard.html" class="nav-item" data-page="dashboard">
+                    <span class="material-icons-round">dashboard</span>
+                    Dashboard
+                </a>
+
+                <span class="nav-label">Surat</span>
+
+                <a href="PengajuanSuratTugas_Readkosong.html" class="nav-item" data-page="pengajuan">
+                    <span class="material-icons-round">description</span>
+                    Pengajuan Surat Tugas
+                </a>
+
+                <span class="nav-label">Data Master</span>
+
+                <a href="datadiri.html" class="nav-item" data-page="diri">
+                    <span class="material-icons-round">badge</span>
+                    Data Diri
+                </a>
+
+                <a href="tambahdatagolongan.html" class="nav-item" data-page="pangkat">
+                    <span class="material-icons-round">military_tech</span>
+                    Data Pangkat Golongan
+                </a>
+
+                <a href="createJabFung.html" class="nav-item" data-page="jabfung">
+                    <span class="material-icons-round">work</span>
+                    Data Jabatan Fungsional
+                </a>
+
+            </nav>
+        </aside>
+
+  <main class="main">
+
+    <section class="form-card">
+      <h1>Pengisian Data Pangkat Golongan</h1>
+      <form name="createForm" onsubmit="validateForm(event)">
+        <label>Nama</label>
+        <input type="text" name="Nama" id="nama">
+        <small id="errorNama" class="error"></small>
+
+        <label>NIP</label>
+        <input type="text" name="NIP" id="nip">
+        <small id="errorNip" class="error"></small>
+
+        <label>Pangkat Golongan</label>
+        <input type="text" name="jabatan" id="jabatan">
+        <small id="errorJabatan" class="error"></small>
+
+        <label>TMT</label>
+        <input type="date" name="tmt_jabatan" id="tmt">
+        <small id="errorTmt" class="error"></small>
+
+        <label>Upload SK Jabatan</label>
+        <input type="file" name="sk_jabatan" id="sk" accept="application/pdf">
+        <small id="errorSk" class="error"></small>
+
+        <div class="form-actions">
+          <button type="reset" class="btn-batal">Batal</button>
+          <button type="submit" class="btn-simpan">Simpan</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+</div>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body> 
+</html>
+
+
